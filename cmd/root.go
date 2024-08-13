@@ -35,8 +35,12 @@ func init() {
 	}
 	viper.SetDefault("verbose", false)
 
-	rootCmd.PersistentFlags().StringP("source", "s", "", "Source file")
-	viper.BindPFlag("source", rootCmd.PersistentFlags().Lookup("source"))
+	rootCmd.PersistentFlags().StringP("file", "s", "", "Source file")
+	viper.BindPFlag("file", rootCmd.PersistentFlags().Lookup("file"))
+	rootCmd.PersistentFlags().StringP("from", "f", "", "Source type")
+	viper.BindPFlag("from", rootCmd.PersistentFlags().Lookup("from"))
+	rootCmd.PersistentFlags().StringP("to", "t", "", "destination type")
+	viper.BindPFlag("to", rootCmd.PersistentFlags().Lookup("to"))
 }
 
 // initConfig reads in config file and ENV variables if set.

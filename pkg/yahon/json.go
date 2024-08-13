@@ -9,7 +9,7 @@ import (
 	"github.com/hashicorp/hcl/json/parser"
 )
 
-func Yahon(ctx context.Context, source string) {
+func (Holder) JsonToHcl(ctx context.Context, source string) {
 	input, err := os.ReadFile(source)
 	if err != nil {
 		fmt.Printf("Error: %s", err)
