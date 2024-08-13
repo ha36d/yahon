@@ -22,8 +22,6 @@ var convertCmd = &cobra.Command{
 		from := viper.GetString("from")
 		to := viper.GetString("to")
 
-		fmt.Println(strcase.ToCamel(fmt.Sprintf("%s to %s", from, to)))
-
 		ctx := context.Background()
 
 		f := reflect.ValueOf(yahon.Holder{}).
